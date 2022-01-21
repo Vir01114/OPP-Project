@@ -5,8 +5,8 @@
 #include "caine.h"
 
 caine::caine(const std::string &numeAnimal, const std::string &specie, const std::string &rasa, int varsta,
-             float greutate, const std::string &talie, const std::string &dieta, const std::string &tipBlana) : animal(
-        numeAnimal, specie, rasa, varsta, greutate), talie(talie), dieta(dieta), tip_blana(tipBlana), hrana(cantitate_hrana()) {}
+             float greutate, const std::string &talie, const std::string &dieta, const std::string &tipBlana, std::vector<concurs_canin> concursuri) : animal(
+        numeAnimal, specie, rasa, varsta, greutate), talie(talie), dieta(dieta), tip_blana(tipBlana), concursuri(concursuri), hrana(cantitate_hrana()) {}
 
 std::shared_ptr<animal> caine::clone() const {
     return std::make_shared <caine>(*this);

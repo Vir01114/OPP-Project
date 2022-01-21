@@ -3,4 +3,4 @@ project(Tema_POO)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Tema_POO main.cpp animal.cpp angajat.cpp cusca.cpp caine.cpp pisica.cpp papagal.cpp exceptii.cpp anagajat_template.cpp)
+add_executable(Tema_POO main.cpp animal.cpp angajat.cpp cusca.cpp caine.cpp pisica.cpp papagal.cpp exceptii.cpp anagajat_template.cpp concurs_canin.cpp concurs_canin.h)
