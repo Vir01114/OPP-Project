@@ -20,9 +20,9 @@
         pisica a2{"Bella", "Felis silvestris catus", "British shorthair", 3, 2.7, 1, "sanatos"};
         papagal a3{"Roko", "Psittaciformes", "Ara Ararauna", 5, 1.8, "sanatos", 0};
 
-        angajat b1{"Ronald", "director", 57 };
-        angajat b2{"Esteban Julio Ricardo Montoya de la Rosa Ramirez", "ingrijitor", 30};
-        angajat b3("Tugui Iustin", "consultant adoptii", 19);
+        angajat<int> b1{"Ronald", "director", 57 };
+        angajat<int> b2{"Esteban Julio Ricardo Montoya de la Rosa Ramirez", "ingrijitor", 30};
+        angajat<int> b3("Tugui Iustin", "consultant adoptii", 19);
 
         cusca c1{1, "feline"};
         c1.adauga(a2);
