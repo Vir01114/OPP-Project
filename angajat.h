@@ -9,17 +9,25 @@
 #include <iostream>
 #include "exceptii.h"
 
+template <typename T>
+class angajat;
+
+template <typename T>
+std::ostream &operator<<(std::ostream &os, const angajat<T> &angajat);
+
+template <typename T>
 class angajat {
     std::string numeAngajat;
     std::string functie;
     int varsta;
+    T salariu;
     int ore_lucru;
     const int id;
     static int count;
 public:
-    angajat(const std::string &numeAngajat, const std::string &functie, int varsta);
+    angajat(const std::string &numeAngajat, const std::string &functie, int varsta, T salariu);
 
-    friend std::ostream &operator<<(std::ostream &os, const angajat &angajat);
+    friend std::ostream &operator<<(std::ostream &, const angajat<T> &);
 
     ~angajat()=default;
     int program();

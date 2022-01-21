@@ -3,18 +3,22 @@
 //
 
 #include "angajat.h"
-int angajat::count=1;
-angajat::angajat(const std::string &numeAngajat, const std::string &functie, int varsta) : numeAngajat(numeAngajat), functie(functie), varsta(varsta), ore_lucru(program()), id(count) {
+
+template <typename T>
+int angajat<T>::count=1;
+template <typename T>
+angajat<T>::angajat(const std::string &numeAngajat, const std::string &functie, int varsta, T salariu) : numeAngajat(numeAngajat), functie(functie), varsta(varsta), salariu(salariu), ore_lucru(program()), id(count) {
     count++;
     if (varsta > 65)
         throw(limita_varsta());
 }
-std::ostream &operator<<(std::ostream &os, const angajat &angajat) {
-    os << "nume: " << angajat.numeAngajat << "functie: " << angajat.functie << "varsta: " << angajat.varsta << "ore de lucru:" << angajat.ore_lucru; "\n";
+template <typename T>
+std::ostream &operator<<(std::ostream &os, const angajat<T> &angajat) {
+    os << "nume: " << angajat.numeAngajat << "functie: " << angajat.functie << "varsta: " << angajat.varsta<< "salariu:"<<angajat.salariu << "ore de lucru:" << angajat.ore_lucru; "\n";
     return os;
 }
-
-int angajat::program() {
+template <typename T>
+int angajat<T>::program() {
     if (varsta <= 55)
         ore_lucru = 8;
     else
